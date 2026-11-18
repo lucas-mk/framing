@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base UI Kit - Showcase</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
+</head>
+<body>
+  <nav class="ui-navbar" aria-label="Main">
+    <span class="ui-navbar__brand">Project name</span>
+    <span><a href="#">Home</a><a href="#">Requests</a><a href="#">Settings</a></span>
+  </nav>
+
+  <main class="ui-container ui-stack">
+    <ol class="ui-breadcrumb" aria-label="Breadcrumb"><li>Home</li><li>Requests</li><li>New request</li></ol>
+    <h1>Base UI kit showcase</h1>
+
+    <section class="ui-stack" aria-labelledby="buttons">
+      <h2 id="buttons">Buttons</h2>
+      <div class="ui-row">
+        <button class="ui-button">Primary</button>
+        <button class="ui-button ui-button--secondary">Secondary</button>
+        <button class="ui-button ui-button--ghost">Ghost</button>
+        <button class="ui-button ui-button--danger">Danger</button>
+        <button class="ui-button ui-button--sm">Small</button>
+        <button class="ui-button" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section class="ui-stack" aria-labelledby="forms">
+      <h2 id="forms">Form</h2>
+      <form class="ui-grid">
+        <div class="ui-field">
+          <label class="ui-label ui-label--required" for="name">Name</label>
+          <input class="ui-input" id="name" type="text" aria-describedby="name-help">
+          <span class="ui-help" id="name-help">As shown on your account.</span>
+        </div>
+        <div class="ui-field">
+          <label class="ui-label" for="email">Email</label>
+          <input class="ui-input" id="email" type="email" aria-invalid="true" aria-describedby="email-error">
+          <span class="ui-error" id="email-error">Enter a valid email address.</span>
+        </div>
+        <div class="ui-field">
+          <label class="ui-label" for="type">Type</label>
+          <select class="ui-select" id="type"><option>Option A</option><option>Option B</option></select>
+        </div>
+        <div class="ui-field">
+          <label class="ui-label" for="comment">Comment</label>
+          <textarea class="ui-textarea" id="comment"></textarea>
+        </div>
+        <label class="ui-check"><input type="checkbox"> I agree to the terms</label>
+        <label class="ui-check"><input type="radio" name="r"> Choice 1</label>
+      </form>
+    </section>
+
+    <section class="ui-stack" aria-labelledby="feedback">
+      <h2 id="feedback">Alerts and badges</h2>
+      <div class="ui-alert ui-alert--info" role="status">Information message.</div>
+      <div class="ui-alert ui-alert--success" role="status">Saved successfully.</div>
+      <div class="ui-alert ui-alert--warning" role="alert">Check this before continuing.</div>
+      <div class="ui-alert ui-alert--danger" role="alert">An error occurred.</div>
+      <div class="ui-row">
+        <span class="ui-badge">Draft</span><span class="ui-badge ui-badge--info">In review</span>
+        <span class="ui-badge ui-badge--success">Approved</span><span class="ui-badge ui-badge--warning">Pending</span>
+        <span class="ui-badge ui-badge--danger">Rejected</span>
+      </div>
+    </section>
+
+    <section class="ui-stack" aria-labelledby="cards">
+      <h2 id="cards">Cards and tabs</h2>
+      <div class="ui-tabs" role="tablist">
+        <button class="ui-tab" role="tab" aria-selected="true">Overview</button>
+        <button class="ui-tab" role="tab" aria-selected="false">History</button>
+      </div>
+      <div class="ui-grid">
+        <article class="ui-card"><h3 class="ui-card__title">Card title</h3><p>Card content.</p><button class="ui-button ui-button--sm">Action</button></article>
+        <article class="ui-card"><h3 class="ui-card__title">Another card</h3><p>Card content.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="tables">
+      <h2 id="tables">Table</h2>
+      <table class="ui-table">
+        <caption>Requests</caption>
+        <thead><tr><th scope="col">ID</th><th scope="col">Title</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><td>001</td><td>First request</td><td><span class="ui-badge ui-badge--success">Approved</span></td></tr>
+          <tr><td>002</td><td>Second request</td><td><span class="ui-badge ui-badge--warning">Pending</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

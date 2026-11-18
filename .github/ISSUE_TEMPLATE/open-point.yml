@@ -1,0 +1,33 @@
+name: Open point
+description: A question or item to be confirmed during scoping
+labels: ["open-point"]
+body:
+  - type: dropdown
+    id: step
+    attributes:
+      label: Scoping step
+      options:
+        - 1 - Business needs
+        - 2 - Stakeholders
+        - 3 - Discovery
+        - 4 - Scope
+        - 5 - User testing
+        - 6 - Risks & assumptions
+        - 7 - Roadmap & estimation
+        - 8 - Summary
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / to be confirmed
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Who can answer?
+  - type: input
+    id: due
+    attributes:
+      label: Needed by (date)

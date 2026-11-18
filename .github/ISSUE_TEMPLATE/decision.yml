@@ -1,0 +1,24 @@
+name: Decision
+description: Record a decision taken during scoping
+labels: ["decision"]
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: Decision maker
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / source (meeting, email, document)
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on scope, planning or risks
